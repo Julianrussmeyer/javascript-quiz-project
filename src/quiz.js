@@ -29,5 +29,11 @@ class Quiz {
     this.correctAnswers += 1;
   }
 
-  // 6. hasEnded()
+ hasEnded(){
+    if (this.currentQuestionIndex < this.questions.length) {
+        return false
+    } else {
+        return true
+    }
+ }
 }
