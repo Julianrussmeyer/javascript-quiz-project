@@ -42,9 +42,13 @@ class Quiz {
       }
     this.questions = this.questions.filter((currentElement) => currentElement.difficulty === difficulty)
   }
+
+averageDifficulty() {
+  const total = this.questions.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.difficulty;
+  },0);
+  return total / this.questions.length
 }
 
-
-
-
+}
 
